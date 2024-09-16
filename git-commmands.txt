@@ -1,5 +1,6 @@
 (1)++++++++++++++++++++++++++++++++++++++++++++++++++++SETUP+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Configuring user information used across all local repositories
+this is the edited on eform xyz
 
 git config --global user.name “[firstname lastname]”
 git config --global user.email “[valid-email]”
