@@ -28,7 +28,6 @@ git clone [url]
 
 
 
-
 (3)+++++++++++++++++++++++++++++++++++++++++++++STAGE & SNAPSHOT+++++++++++++++++++++++++++++++++++++++++++++
 Working with snapshots and the Git staging area
 
@@ -49,8 +48,6 @@ git diff --staged
 
 git commit -m “[descriptive message]”
 # commit your staged content as a new commit snapshot
-
-
 
 
 
@@ -101,7 +98,6 @@ git show [SHA]
 
 
 
-
 (6)+++++++++++++++++++++++++++++++++++++++++++++++TRACKING PATH CHANGES++++++++++++++++++++++++++++++++++++++++++++++
 Versioning file removes and path changes
 
@@ -114,6 +110,8 @@ git mv [existing-path] [new-path]
 
 git log --stat -M
 # show all commit logs with indication of any paths that moved
+
+
 
 
 
@@ -131,6 +129,9 @@ pattern*/
 
 git config --global core.excludesfile [file]
 # system wide ignore patern for all local repositories
+
+
+
 
 
 
@@ -171,6 +172,7 @@ git reset --hard [commit]
 
 
 
+
 (10)++++++++++++++++++++++++++++++++++++++++++++++=TEMPORARY COMMITS+++++++++++++++++++++++++++++++++++++++++++++++
 Temporarily store modified, tracked files in order to change branches
 
@@ -186,7 +188,3 @@ git stash pop
 
 git stash drop
 # discard the changes from top of stash stack
-
-
-
-
