@@ -1,3 +1,19 @@
+***INDEX***
+
+SETUP
+SETUP & INIT
+STAGE & SNAPSHOT
+BRANCH & MERGE
+INSPECT & COMPARE
+TRACKING PATH CHANGES
+IGNORING PATTERNS
+SHARE & UPDATE
+REWRITE HISTORY
+TEMPORARY COMMITS
+
+
+
+
 (1)++++++++++++++++++++++++++++++++++++++++++++++++++++SETUP+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Configuring user information used across all local repositories
 
