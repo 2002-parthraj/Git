@@ -1,0 +1,251 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Git Cheat Sheet</title>
+
+<style type="text/css">
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header styles */
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .logo {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+        }
+
+        .logo-box {
+            width: 100%;
+            height: 100%;
+            background: #3B82F6;
+            border-radius: 8px;
+            position: absolute;
+            animation: bounce 2s infinite;
+        }
+
+        .logo-box-small {
+            width: 70%;
+            height: 70%;
+            background: #60A5FA;
+            border-radius: 6px;
+            position: absolute;
+            right: -10px;
+            bottom: -10px;
+            animation: bounce 2s infinite;
+            animation-delay: 0.1s;
+        }
+
+
+        .docker-logo {
+          position: relative;
+          width: 80px;  /* Adjust size if needed */
+          height: 80px; /* Adjust size if needed */
+          margin: 0 auto 1rem; /* Centering the logo */
+          animation: bounce 2s infinite; /* Maintain animation */
+      }
+
+        .title {
+            font-size: 2.5rem;
+            color: #1F2937;
+            margin-bottom: 1rem;
+        }
+
+        .section {
+          background: white;
+          border-radius: 12px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          margin-bottom: 1rem;
+          overflow: hidden; 
+          overflow-y: auto;
+          transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-header {
+            padding: 1rem 1.5rem;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: none;
+            width: 100%;
+            text-align: left;
+            transition: background-color 0.2s;
+        }
+
+        .section-header:hover {
+            background: #F3F4F6;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            color: #1F2937;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-icon {
+            width: 24px;
+            height: 24px;
+            color: #3B82F6;
+        }
+
+        .section-content {
+            max-height: 0;
+            overflow: hidden;
+            overflow-y: auto;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .section.active .section-content {
+            max-height: 500px;
+        }
+
+        .chevron {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s;
+        }
+
+        .section.active .chevron {
+            transform: rotate(180deg);
+        }
+
+        /* Command styles */
+        .commands {
+            padding: 1rem 1.5rem;
+        }
+
+        .command {
+            background: #F9FAFB;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            transition: background-color 0.2s;
+        }
+
+        .command:hover {
+            background: #F3F4F6;
+        }
+
+        .command-text {
+            flex-grow: 1;
+        }
+
+        .command-code {
+            font-family: 'Monaco', 'Consolas', monospace;
+            color: #2563EB;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .command-desc {
+            color: #6B7280;
+            font-size: 0.875rem;
+        }
+
+        .copy-btn {
+            background: transparent;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            color: #9CA3AF;
+            transition: color 0.2s;
+        }
+
+        .copy-btn:hover {
+            color: #3B82F6;
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1rem;
+            }
+
+            .command {
+                flex-direction: column;
+            }
+
+            .copy-btn {
+                margin-top: 0.5rem;
+            }
+        }
+    </style></head>
+<body>
+<header>
+<h1> 🚀Git Cheat Sheet </h1>
+</header>
+<div class="container"><header class="header"><div class="logo"><img alt="Git Logo" class="docker-logo" src=""/></div></header><div class="section"><button class="section-header"><span class="section-title">SETUP</span><svg class="chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></button><div class="section-content"><div class="commands"><div class="command"><div class="command-text"><code class="command-code">git config --global user.name “[firstname lastname]”</code><p class="command-desc">Set the username in Git's global configuration.</p></div><button class="copy-btn" onclick="copyToClipboard('git config --global user.name “[firstname lastname]”')"><svg class="bi bi-clipboard" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M3 0h10a1 1 0 0 1 1 1v1H2V1a1 1 0 0 1 1-1zM1 3h14v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3zm3 1v10h8V4H4z"></path></svg></button></div><div class="command"><div class="command-text"><code class="command-code">git config --global user.email “[valid-email]”</code><p class="command-desc">Set the email address in Git's global configuration.</p></div><button class="copy-btn" onclick="copyToClipboard('git config --global user.email “[valid-email]”')"><svg class="bi bi-clipboard" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M3 0h10a1 1 0 0 1 1 1v1H2V1a1 1 0 0 1 1-1zM1 3h14v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3zm3 1v10h8V4H4z"></path></svg></button></div><div class="command"><div class="command-text"><code class="command-code">git config --global color.ui auto</code><p class="command-desc">Enable automatic command line coloring for Git.</p></div><button class="copy-btn" onclick="copyToClipboard('git config --global color.ui auto')"><svg class="bi bi-clipboard" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M3 0h10a1 1 0 0 1 1 1v1H2V1a1 1 0 0 1 1-1zM1 3h14v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3zm3 1v10h8V4H4z"></path></svg></button></div></div></div></div><div class="section"><button class="section-header"><span class="section-title">SETUP &amp; INIT</span><svg class="chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></button><div class="section-content"><div class="commands"><div class="command"><div class="command-text"><code class="command-code">git init</code><p class="command-desc">Initialize an existing directory as a Git repository.</p></div><button class="copy-btn" onclick="copyToClipboard('git init')"><svg class="bi bi-clipboard" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M3 0h10a1 1 0 0 1 1 1v1H2V1a1 1 0 0 1 1-1zM1 3h14v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3zm3 1v10h8V4H4z"></path></svg></button></div><div class="command"><div class="command-text"><code class="command-code">git clone [url]</code><p class="command-desc">Retrieve an entire repository from a hosted location via URL.</p></div><button class="copy-btn" onclick="copyToClipboard('git clone [url]')"><svg class="bi bi-clipboard" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M3 0h10a1 1 0 0 1 1 1v1H2V1a1 1 0 0 1 1-1zM1 3h14v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3zm3 1v10h8V4H4z"></path></svg></button></div></div></div></div><div class="section"><button class="section-header"><span class="section-title">STAGE &amp; SNAPSHOT</span><svg class="chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></button><div class="section-content"><div class="commands"><div class="command"><div class="command-text"><code class="command-code">git status</code><p class="command-desc">Show modified files in the working directory, staged for your next commit.</p></div><button class="copy-btn" onclick="copyToClipboard('git status')"><svg class="bi bi-clipboard" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M3 0h10a1 1 0 0 1 1 1v1H2V1a1 1 0 0 1 1-1zM1 3h14v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3zm3 1v10h8V4H4z"></path></svg></button></div><div class="command"><div class="command-text"><code class="command-code">git add [file]</code><p class="command-desc">Add a file as it looks now to your next commit (stage).</p></div><button class="copy-btn" onclick="copyToClipboard('git add [file]')"><svg class="bi bi-clipboard" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M3 0h10a1 1 0 0 1 1 1v1H2V1a1 1 0 0 1 1-1zM1 3h14v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3zm3 1v10h8V4H4z"></path></svg></button></div><div class="command"><div class="command-text"><code class="command-code">git reset [file]</code><p class="command-desc">Unstage a file while retaining the changes in the working directory.</p></div><button class="copy-btn" onclick="copyToClipboard('git reset [file]')"><svg class="bi bi-clipboard" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M3 0h10a1 1 0 0 1 1 1v1H2V1a1 1 0 0 1 1-1zM1 3h14v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3zm3 1v10h8V4H4z"></path></svg></button></div></div></div></div></div><script type="text/javascript">
+        // Toggle sections
+        document.querySelectorAll('.section-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const section = header.parentElement;
+                section.classList.toggle('active');
+            });
+        });
+
+        // Copy to clipboard
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                // Optional: Add a visual feedback when copied
+                const btn = event.currentTarget;
+                btn.style.color = '#3B82F6';
+                setTimeout(() => {
+                    btn.style.color = '#9CA3AF';
+                }, 500);
+            });
+        }
+    </script></body></html>
