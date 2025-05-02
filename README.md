@@ -41,7 +41,7 @@ git push -u origin branch-name
 </br>
 
 # TASK-2 📋
-#### create repo in github and clone it in local 
+#### create repo in github & clone it to local 
 <pre>git clone url 
 create a file 
 git add file
@@ -51,7 +51,7 @@ git push -u origin branch-name
 </br>
     
 # TASK -3 📋
-#### create a branch and delete file
+#### create a branch & delete file
 <pre>git checkout branch-name
 git rm filename      
 git commit -m "xyz" filename
@@ -60,7 +60,7 @@ git push -u origin branch-name
 </br>
 
 # TASK -4 📋
-### change the branch and delete the branch 
+### change the branch & delete the branch 
 <pre>git chekout branchname
 git branch
 create a file 
@@ -72,7 +72,7 @@ git push origin --delete branch-name
 </br>
 
 # TASK -5 📋  
-### clone the diffent branch pull a branch
+### clone the diffent branch & pull a branch
 <pre>git clone -b branch-name url 
 git branch
 git pull orgin branch-name
