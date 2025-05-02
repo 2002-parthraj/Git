@@ -15,14 +15,14 @@
 
 
 ### ⚠️ Prerequisites
-#### install git and gitlab \
-apt install git -y && apt install gh -y \
+#### install git and gitlab 
+apt install git -y && apt install gh -y 
 
 
-#### create tokan in github (copy and secure to a text editor) \
+#### create tokan in github (copy and secure to a text editor) 
 
 
-#### Set up Git username and email globally \
+#### Set up Git username and email globally 
 git config --global user.name parthraj \
 git config --global user.email parthraj.learn@gmail.com 
 
