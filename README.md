@@ -1,59 +1,106 @@
 # 🧪 Git & GitHub Practice Steps
 
-This document outlines the Git and GitHub operations I practiced recently. These are structured steps to understand how Git works locally and with GitHub.
+#### This document outlines the Git operations. These are structured steps to understand how Git works locally and with GitHub.
+</br>
+</br>
+</br>
 
----
+<div align="center">
 
-## 🔧 hands on on git
+# **🔧  Git Hands-on**
+</div>
 
-## Set up Git username and email globally:
+</br>
 
 
 
->> create local  git repo
-        mkdir directory
-        git init 
-        create a file 
-        git add file
-        git commit -m "xyz" filename
-        git push -u origin main
+### ⚠️ Prerequisites
+#### install git and gitlab \
+apt install git -y && apt install gh -y \
 
-create repo in github 
-        clone in local
-        create a file 
-        add file
-        commit
-        push
-        
-        create new branch 
-        delete main branch repo
-        clone new branch repo
-        add file
-        commit
-        push
-        
-        delete file in branch 
-        commit
-        push
-        
-        git pull main branch 
-        chang brach 
-        add file
-        commit
-        push
-        
-        
-        delete branch 
 
-create remote branch from local 
-        add file
-        commit
-        push
+#### create tokan in github (copy and secure to a text editor) \
 
-merge a new branch to main  
-        checkout to main branch 
-        pull form main branch 
-        merge new-branch 
-        push to main branch 
+
+#### Set up Git username and email globally \
+git config --global user.name parthraj \
+git config --global user.email parthraj.learn@gmail.com 
+
+</br>
+
+# TASK-1 📋
+#### create local repo 
+<pre>mkdir directory
+cd directory
+git init 
+create a file 
+git add file
+git commit -m "xyz" filename
+git push -u origin branch-name
+</pre>
+</br>
+
+# TASK-2 📋
+#### create repo in github and clone it in local 
+<pre>git clone url 
+create a file 
+git add file
+git commit -m "xyz" filename
+git push -u origin branch-name
+</pre>
+</br>
+    
+# TASK -3 📋
+#### create a branch and delete file
+<pre>git checkout branch-name
+git rm filename      
+git commit -m "xyz" filename
+git push -u origin branch-name
+</pre>
+</br>
+
+# TASK -4 📋
+### change the branch and delete the branch 
+<pre>git chekout branchname
+git branch
+create a file 
+git add file
+git commit -m "xyz" filename
+git push -u origin branch-name
+git push origin --delete branch-name
+</pre>
+</br>
+
+# TASK -5 📋  
+### clone the diffent branch pull a branch
+<pre>git clone -b branch-name url 
+git branch
+git pull orgin branch-name
+git branch 
+create a file 
+git add file
+git commit -m "xyz" filename
+git push -u origin branch-name    
+</pre>
+</br>
+   
+# TASK -6 📋     
+###  merge the new branch to main branch 
+<pre>git checkout main
+git pull origin main
+git branch
+git merge origin new-branch
+</pre>
+</br>
+
+# TASK -7 📋
+### create github repo form local
+<pre>apt install gh -y </br>
+gh auth login
+git remote add origin https://github.com/2002-parthraj/reponame.git
+gh repo create reponame --public --source=. --remote=origin --push
+</pre>
+
+
 
 
